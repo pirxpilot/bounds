@@ -1,0 +1,22 @@
+{
+  "name": "bounds",
+  "version": "0.0.1",
+  "description": "Mixin for checking if value is inside or outside of bounds",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:code42day/bounds.git"
+  },
+  "keywords": [
+    "bounds",
+    "range",
+    "compare"
+  ],
+  "author": "Damian Krzeminski pirxpilot@code42day.com",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "gitHead": "706dd65701bc29718f64d2fdc65cde650609ce24"
+}
