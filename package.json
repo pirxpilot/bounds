@@ -18,5 +18,9 @@
   "author": "Damian Krzeminski pirxpilot@code42day.com",
   "license": "MIT",
   "readmeFilename": "Readme.md",
-  "gitHead": "706dd65701bc29718f64d2fdc65cde650609ce24"
+  "gitHead": "706dd65701bc29718f64d2fdc65cde650609ce24",
+  "devDependencies": {
+    "mocha": "~1.8.1",
+    "jshint": "~0.9.1"
+  }
 }
