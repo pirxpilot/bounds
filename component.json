@@ -1,0 +1,13 @@
+{
+  "name": "bounds",
+  "repo": "code42day/bounds",
+  "description": "Mixin for checking if value is inside or outside of bounds",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
