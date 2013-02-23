@@ -17,11 +17,17 @@ Bounds.prototype.compare = function(fn) {
 };
 
 Bounds.prototype.min = function(v) {
+  if (!arguments.length) {
+    return this._min;
+  }
   this._min = v;
   return this;
 };
 
 Bounds.prototype.max = function(v) {
+  if (!arguments.length) {
+    return this._max;
+  }
   this._max = v;
   return this;
 };

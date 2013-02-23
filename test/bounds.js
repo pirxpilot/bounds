@@ -31,6 +31,8 @@ describe('Bounds', function(){
     assert.ok(b.in(15));
     assert.ok(b.out(16));
     assert.ok(b.after(17));
+    assert.equal(b.min(), -2);
+    assert.equal(b.max(), 15);
   });
 
   it('should work if only min is specified', function(){
