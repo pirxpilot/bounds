@@ -1,6 +1,6 @@
 {
   "name": "bounds",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Mixin for checking if value is inside or outside of bounds",
   "main": "index.js",
   "scripts": {

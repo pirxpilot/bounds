@@ -2,7 +2,7 @@
   "name": "bounds",
   "repo": "code42day/bounds",
   "description": "Mixin for checking if value is inside or outside of bounds",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": [
     "range",
     "compare"
