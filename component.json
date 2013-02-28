@@ -7,7 +7,9 @@
     "range",
     "compare"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "component/clone": "*"
+  },
   "development": {},
   "license": "MIT",
   "scripts": [

@@ -22,5 +22,8 @@
   "devDependencies": {
     "mocha": "~1.8.1",
     "jshint": "~0.9.1"
+  },
+  "dependencies": {
+    "clone-component": "~0.1.0"
   }
 }
