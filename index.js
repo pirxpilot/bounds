@@ -9,7 +9,7 @@ if ('undefined' == typeof window) {
 module.exports = Bounds;
 
 
-function reversed(self) {
+function calculateReversed(self) {
   return self._min
     && self._max
     && self.before(self._max);
@@ -41,6 +41,7 @@ Bounds.prototype.min = function(v) {
     return this._min;
   }
   this._min = v;
+  delete this._reversed;
   return this;
 };
 
@@ -49,6 +50,7 @@ Bounds.prototype.max = function(v) {
     return this._max;
   }
   this._max = v;
+  delete this._reversed;
   return this;
 };
 
@@ -69,7 +71,7 @@ Bounds.prototype.in = function(v) {
 };
 
 Bounds.prototype.valid = function(v) {
-  if (reversed(this)) {
+  if (this.reversed()) {
     return !this.after(v) || !this.before(v);
   }
   return this.in(v);
@@ -79,8 +81,15 @@ Bounds.prototype.invalid = function(v) {
   return !this.valid(v);
 };
 
+Bounds.prototype.reversed = function() {
+  if (this._reversed === undefined) {
+    this._reversed = calculateReversed(this);
+  }
+  return this._reversed;
+};
+
 Bounds.prototype.restrict = function(v) {
-  if (reversed(this)) {
+  if (this.reversed()) {
     if(this.after(v) && this.before(v)) {
       // select closer bound
       return (this._distance(this._max, v) < this._distance(v, this._min))

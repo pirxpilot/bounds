@@ -106,5 +106,32 @@ describe('Bounds', function(){
     assert.equal(15, b.restrict(15));
   });
 
+  it('should reset reversed state', function(){
+    var b = new Bounds();
+
+    assert.ok(!b.reversed());
+
+    b.compare(numcmp);
+    assert.ok(!b.reversed());
+
+    b.min(3);
+    assert.ok(!b.reversed());
+
+    b.max(10);
+    assert.ok(!b.reversed());
+
+    b.min(13);
+    assert.ok(b.reversed());
+
+    b.min(undefined);
+    assert.ok(!b.reversed());
+
+    b.min(13);
+    assert.ok(b.reversed());
+
+    b.max(undefined);
+    assert.ok(!b.reversed());
+  });
+
 
 });
