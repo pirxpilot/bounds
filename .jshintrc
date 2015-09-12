@@ -1,10 +1,10 @@
 {
-  "undef": "true",
-  "unused": "true",
-  "laxbreak": "true",
-  "laxcomma": "true",
-  "es5": "true",
-  "supernew": "false",
+  "undef": true,
+  "unused": true,
+  "laxbreak": true,
+  "laxcomma": true,
+  "es5": true,
+  "supernew": false,
   "globals": {
     "console": false,
     "describe": false,
