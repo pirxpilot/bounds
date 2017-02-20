@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:code42day/bounds.git"
+    "url": "git@github.com:pirxpilot/bounds.git"
   },
   "keywords": [
     "bounds",
     "range",
     "compare"
   ],
-  "author": "Damian Krzeminski pirxpilot@code42day.com",
+  "author": "Damian Krzeminski pirxpilot@furkot.com",
   "license": "MIT",
   "readmeFilename": "Readme.md",
   "gitHead": "706dd65701bc29718f64d2fdc65cde650609ce24",

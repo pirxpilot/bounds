@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/code42day/bounds.png)](http://travis-ci.org/code42day/bounds)
+[![Build Status](https://secure.travis-ci.org/pirxpilot/bounds.png)](http://travis-ci.org/pirxpilot/bounds)
 
 # bounds
 
@@ -9,10 +9,6 @@
   min is bigger than max it considers values outside ot the max, min range as valid.
 
 ## Installation
-
-    $ component install code42day/bounds
-
-or
 
     $ npm install bounds
 
