@@ -1,13 +1,13 @@
-all: lint test build
+all: lint test
 
 lint:
-	@./node_modules/.bin/jshint index.js test/*.js
+	@./node_modules/.bin/jshint index.js test
 
 test:
 	@./node_modules/.bin/mocha \
 		--reporter spec
 
-clean:
-	rm -fr build components template.js
+distclean:
+	rm -fr node_modules
 
-.PHONY: clean test lint
+.PHONY: distclean test lint

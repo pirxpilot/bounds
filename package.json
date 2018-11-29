@@ -6,10 +6,7 @@
   "scripts": {
     "test": "make test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:pirxpilot/bounds.git"
-  },
+  "repository": "pirxpilot/bounds",
   "keywords": [
     "bounds",
     "range",
@@ -17,16 +14,14 @@
   ],
   "author": "Damian Krzeminski pirxpilot@furkot.com",
   "license": "MIT",
-  "readmeFilename": "Readme.md",
-  "gitHead": "706dd65701bc29718f64d2fdc65cde650609ce24",
   "devDependencies": {
-    "mocha": "~1.8.1",
-    "jshint": "~0.9.1"
+    "jshint": "~2",
+    "mocha": "~5"
   },
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
-    "clone-component": "~0"
-  },
-  "browser": {
-    "clone": "clone-component"
+    "clone-component": "^0.2.2"
   }
 }
