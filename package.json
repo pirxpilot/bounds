@@ -28,5 +28,8 @@
   },
   "browser": {
     "clone": "clone-component"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }
