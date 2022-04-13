@@ -1,4 +1,4 @@
-all: lint test
+check: lint test
 
 lint:
 	@./node_modules/.bin/jshint index.js test
@@ -10,4 +10,4 @@ test:
 distclean:
 	rm -fr node_modules
 
-.PHONY: distclean test lint
+.PHONY: distclean test lint check

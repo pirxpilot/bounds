@@ -1,4 +1,5 @@
-[![Build Status](https://secure.travis-ci.org/pirxpilot/bounds.png)](http://travis-ci.org/pirxpilot/bounds)
+[![NPM version][npm-image]][npm-url]
+[![Build Status][build-image]][build-url]
 
 # bounds
 
@@ -62,3 +63,9 @@ If restricted value is closed to `min` than to `max`, then the `min` is returned
 ## License
 
   MIT
+
+[npm-url]: https://npmjs.org/package/bounds
+[npm-image]: https://img.shields.io/npm/v/bounds.svg
+
+[build-url]: https://github.com/pirxpilot/bounds/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/bounds/check

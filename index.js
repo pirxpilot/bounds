@@ -1,5 +1,3 @@
-const clone = require('clone-component');
-
 class Bounds {
 
   static mixin(obj) {
@@ -72,20 +70,21 @@ class Bounds {
   }
 
   restrict(v) {
+    const { _min, _max } = this;
     if (this.reversed()) {
       if(this.after(v) && this.before(v)) {
         // select closer bound
-        return (this._distance(this._max, v) < this._distance(v, this._min)) ?
-          clone(this._max) :
-          clone(this._min);
+        return (this._distance(_max, v) < this._distance(v, _min)) ?
+          _max:
+          _min;
       }
       return v;
     }
     if(this.before(v)) {
-      return clone(this._min);
+      return _min;
     }
     if(this.after(v)) {
-      return clone(this._max);
+      return _max;
     }
     return v;
   }
