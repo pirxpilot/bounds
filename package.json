@@ -15,8 +15,7 @@
   "author": "Damian Krzeminski pirxpilot@furkot.com",
   "license": "MIT",
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
-    "mocha": "~9"
+    "@pirxpilot/jshint": "~3"
   },
   "files": [
     "index.js"

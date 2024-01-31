@@ -1,11 +1,10 @@
 check: lint test
 
 lint:
-	@./node_modules/.bin/jshint index.js test
+	./node_modules/.bin/jshint index.js test
 
 test:
-	@./node_modules/.bin/mocha \
-		--reporter spec
+	node --test
 
 distclean:
 	rm -fr node_modules

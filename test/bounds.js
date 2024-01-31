@@ -1,6 +1,7 @@
-var Bounds = require('../index.js');
-var assert = require('assert');
+const { describe, it } = require('node:test');
+const assert = require('assert');
 
+const Bounds = require('../index.js');
 
 function numcmp(a, b) {
   return a - b;
@@ -14,17 +15,17 @@ function strcmp(a, b) {
   return (a < b) ? -1 : (a > b ? 1 : 0);
 }
 
-describe('Bounds', function(){
-  it('should consider all values as valid if no min/max specified', function(){
-    var b = new Bounds();
+describe('Bounds', function () {
+  it('should consider all values as valid if no min/max specified', function () {
+    const b = new Bounds();
     assert.ok(!b.before(2));
     assert.ok(!b.after(5));
     assert.ok(b.in(2002));
     assert.ok(!b.out(15));
   });
 
-  it('should consider values inside of the range as valid', function(){
-    var b = new Bounds()
+  it('should consider values inside of the range as valid', function () {
+    const b = new Bounds()
       .compare(numcmp)
       .min(-2)
       .max(15);
@@ -39,8 +40,8 @@ describe('Bounds', function(){
     assert.equal(b.max(), 15);
   });
 
-  it('should consider values outside of the range as valid, when reversed', function(){
-    var b = new Bounds()
+  it('should consider values outside of the range as valid, when reversed', function () {
+    const b = new Bounds()
       .compare(numcmp)
       .max(-2)
       .min(15);
@@ -51,8 +52,8 @@ describe('Bounds', function(){
     assert.ok(b.valid(16));
   });
 
-  it('should work if only min is specified', function(){
-    var b = new Bounds()
+  it('should work if only min is specified', function () {
+    const b = new Bounds()
       .compare(strcmp)
       .min('abc');
     assert.ok(!b.valid('aac'));
@@ -60,8 +61,8 @@ describe('Bounds', function(){
     assert.ok(b.valid('ade'));
   });
 
-  it('should work if only max is specified', function(){
-    var b = new Bounds()
+  it('should work if only max is specified', function () {
+    const b = new Bounds()
       .compare(strcmp)
       .max('abc');
     assert.ok(b.valid('aac'));
@@ -69,8 +70,8 @@ describe('Bounds', function(){
     assert.ok(!b.valid('ade'));
   });
 
-  it('should restrict values to min or max', function() {
-    var b = new Bounds()
+  it('should restrict values to min or max', function () {
+    const b = new Bounds()
       .compare(strcmp)
       .min('abc')
       .max('pqrs');
@@ -81,8 +82,8 @@ describe('Bounds', function(){
     assert.equal('pqrs', b.restrict('pqrs'));
   });
 
-  it('should restrict reverse ranges to min or max', function() {
-    var b = new Bounds()
+  it('should restrict reverse ranges to min or max', function () {
+    const b = new Bounds()
       .compare(strcmp)
       .max('abc')
       .min('pqrs');
@@ -93,8 +94,8 @@ describe('Bounds', function(){
   });
 
 
-  it('should restrict to min or max depending on the distance', function(){
-    var b = new Bounds()
+  it('should restrict to min or max depending on the distance', function () {
+    const b = new Bounds()
       .distance(numdistance)
       .compare(numcmp)
       .max(-2)
@@ -106,8 +107,8 @@ describe('Bounds', function(){
     assert.equal(15, b.restrict(15));
   });
 
-  it('should reset reversed state', function(){
-    var b = new Bounds();
+  it('should reset reversed state', function () {
+    const b = new Bounds();
 
     assert.ok(!b.reversed());
 
