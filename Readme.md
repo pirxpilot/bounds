@@ -65,7 +65,7 @@ If restricted value is closed to `min` than to `max`, then the `min` is returned
   MIT
 
 [npm-url]: https://npmjs.org/package/bounds
-[npm-image]: https://img.shields.io/npm/v/bounds.svg
+[npm-image]: https://img.shields.io/npm/v/bounds
 
 [build-url]: https://github.com/pirxpilot/bounds/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/bounds/check
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/bounds/check.yaml?branch=main
