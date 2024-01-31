@@ -72,18 +72,18 @@ class Bounds {
   restrict(v) {
     const { _min, _max } = this;
     if (this.reversed()) {
-      if(this.after(v) && this.before(v)) {
+      if (this.after(v) && this.before(v)) {
         // select closer bound
         return (this._distance(_max, v) < this._distance(v, _min)) ?
-          _max:
+          _max :
           _min;
       }
       return v;
     }
-    if(this.before(v)) {
+    if (this.before(v)) {
       return _min;
     }
-    if(this.after(v)) {
+    if (this.after(v)) {
       return _max;
     }
     return v;
