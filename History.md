@@ -1,4 +1,10 @@
 
+3.0.1 / 2024-01-31
+==================
+
+ * replace mocha with node:test
+ * replace jshint with @pirxpilot/jshint
+
 3.0.0 / 2022-04-13
 ==================
 
