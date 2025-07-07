@@ -1,4 +1,4 @@
-class Bounds {
+export default class Bounds {
   static mixin(obj) {
     for (const key of Object.getOwnPropertyNames(Bounds.prototype)) {
       if (key !== 'constructor') {
@@ -92,5 +92,3 @@ class Bounds {
 function calculateReversed(self) {
   return self._min && self._max && self.before(self._max);
 }
-
-module.exports = Bounds;
