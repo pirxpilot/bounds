@@ -22,6 +22,14 @@ test('should consider all values as valid if no min/max specified', t => {
   t.assert.ok(!b.out(15));
 });
 
+test('should work as a mixin', t => {
+  const b = Bounds.mixin({});
+  t.assert.ok(!b.before(2));
+  t.assert.ok(!b.after(5));
+  t.assert.ok(b.in(2002));
+  t.assert.ok(!b.out(15));
+});
+
 test('should consider values inside of the range as valid', t => {
   const b = new Bounds().compare(numcmp).min(-2).max(15);
   t.assert.ok(b.before(-3));

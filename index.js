@@ -1,7 +1,9 @@
 class Bounds {
   static mixin(obj) {
-    for (const key in Bounds.prototype) {
-      obj[key] = Bounds.prototype[key];
+    for (const key of Object.getOwnPropertyNames(Bounds.prototype)) {
+      if (key !== 'constructor') {
+        obj[key] = Bounds.prototype[key];
+      }
     }
     return obj;
   }
