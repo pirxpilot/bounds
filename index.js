@@ -1,5 +1,4 @@
 class Bounds {
-
   static mixin(obj) {
     for (const key in Bounds.prototype) {
       obj[key] = Bounds.prototype[key];
@@ -36,11 +35,11 @@ class Bounds {
   }
 
   before(v) {
-    return this._min && (this._compare(v, this._min) < 0);
+    return this._min && this._compare(v, this._min) < 0;
   }
 
   after(v) {
-    return this._max && (this._compare(v, this._max) > 0);
+    return this._max && this._compare(v, this._max) > 0;
   }
 
   out(v) {
@@ -74,9 +73,7 @@ class Bounds {
     if (this.reversed()) {
       if (this.after(v) && this.before(v)) {
         // select closer bound
-        return (this._distance(_max, v) < this._distance(v, _min)) ?
-          _max :
-          _min;
+        return this._distance(_max, v) < this._distance(v, _min) ? _max : _min;
       }
       return v;
     }

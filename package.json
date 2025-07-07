@@ -6,7 +6,10 @@
   "scripts": {
     "test": "make test"
   },
-  "repository": "pirxpilot/bounds",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/bounds.git"
+  },
   "keywords": [
     "bounds",
     "range",
@@ -15,7 +18,7 @@
   "author": "Damian Krzeminski pirxpilot@furkot.com",
   "license": "MIT",
   "devDependencies": {
-    "@pirxpilot/jshint": "~3"
+    "@biomejs/biome": "2.0.6"
   },
   "files": [
     "index.js"

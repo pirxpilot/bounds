@@ -1,12 +1,15 @@
 check: lint test
 
 lint:
-	./node_modules/.bin/jshint index.js test
+	./node_modules/.bin/biome ci
+
+format:
+	./node_modules/.bin/biome check --fix
 
 test:
-	node --test
+	node --test $(TEST_OPTS)
 
-distclean:
-	rm -fr node_modules
+test-cov: TEST_OPTS := --experimental-test-coverage
+test-cov: test
 
-.PHONY: distclean test lint check
+.PHONY: check format lint test test-cov
