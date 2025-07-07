@@ -1,6 +1,6 @@
 {
   "name": "bounds",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "Mixin for checking if value is inside or outside of bounds",
   "type": "module",
   "exports": "./index.js",
