@@ -1,4 +1,10 @@
 
+3.0.2 / 2025-07-07
+==================
+
+ * fix using Bounds as a mixin
+ * use `biome` as a linter and formatter
+
 3.0.1 / 2024-01-31
 ==================
 
