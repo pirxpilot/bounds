@@ -1,6 +1,5 @@
-const test = require('node:test');
-
-const Bounds = require('../index.js');
+import test from 'node:test';
+import Bounds from '../index.js';
 
 function numcmp(a, b) {
   return a - b;
